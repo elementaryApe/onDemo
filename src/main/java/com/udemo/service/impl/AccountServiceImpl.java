@@ -2,6 +2,7 @@ package com.udemo.service.impl;
 
 import com.udemo.dao.IAccountDAO;
 import com.udemo.entity.Account;
+import com.udemo.mapper.AccountMapper;
 import com.udemo.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,9 @@ public class AccountServiceImpl implements IAccountService{
 
     @Autowired
     private IAccountDAO accountDAO;
+
+    @Autowired
+    private AccountMapper accountMapper;
 
     @Override
     @Transactional
@@ -42,6 +46,11 @@ public class AccountServiceImpl implements IAccountService{
     @Override
     public Account findAccountById(int id) {
         return accountDAO.findAccountById(id);
+    }
+
+    @Override
+    public com.udemo.model.Account findAccountById(String id) {
+        return accountMapper.selectByPrimaryKey(Integer.valueOf(id));
     }
 
     @Override

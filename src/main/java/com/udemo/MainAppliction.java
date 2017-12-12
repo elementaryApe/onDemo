@@ -1,6 +1,7 @@
 package com.udemo;
 
 import com.udemo.application.StartCommandLineRunner;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,7 @@ import java.util.Arrays;
  * Time: 15:42
  */
 @SpringBootApplication
+@MapperScan("com.udemo.mapper")//项目中对应的mapper类的路径
 public class MainAppliction {
 
     public static void main(String[] args) {

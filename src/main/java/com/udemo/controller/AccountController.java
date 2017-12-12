@@ -2,6 +2,7 @@ package com.udemo.controller;
 
 import com.udemo.entity.Account;
 import com.udemo.service.IAccountService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,11 +28,15 @@ public class AccountController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Account getAccountById(@PathVariable("id") int id) {
-        return accountService.findAccountById(id);
+        com.udemo.model.Account accountById = accountService.findAccountById(String.valueOf(id));
+        Account account=new Account();
+        BeanUtils.copyProperties(accountById,account);
+        return account;
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public String updateAccount(@PathVariable("id") int id, @RequestParam(value = "name", required = true) String name,
+    public String updateAccount(@PathVariable("id") int id,
+                                @RequestParam(value = "name", required = true) String name,
                                 @RequestParam(value = "money", required = true) double money) {
         Account account = new Account();
         account.setMoney(money);

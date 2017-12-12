@@ -20,6 +20,8 @@ public interface IAccountService {
 
     Account findAccountById(int id);
 
+    com.udemo.model.Account findAccountById(String id);
+
     List<Account> findAccountList();
 
 }
