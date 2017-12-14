@@ -1,4 +1,4 @@
-package com.udemo.application;
+package com.udemo.application.mybatis;
 
 import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.plugin.Interceptor;

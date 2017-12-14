@@ -1,6 +1,6 @@
 package com.udemo.controller;
 
-import com.udemo.entity.Account;
+import com.udemo.model.Account;
 import com.udemo.service.IAccountService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

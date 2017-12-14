@@ -1,6 +1,6 @@
 package com.udemo.dao;
 
-import com.udemo.entity.Account;
+import com.udemo.model.Account;
 
 import java.util.List;
 

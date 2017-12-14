@@ -6,6 +6,11 @@ server:
   port: 8080
 
 spring:
+    http:
+        multipart:
+            max-file-size: 128KB
+            max-request-size: 128KB
+
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
         url: jdbc:mysql://123.57.84.78:3306/ttx_app_push
@@ -26,9 +31,23 @@ spring:
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
 
+    redis:
+        database: 1
+        timeout: 5000
+        host: 123.57.84.78
+        port: 6379
+        password: Rongdong520
+        pool:
+          max-active: 8
+          max-wait: -1
+          max-idle: 500
+          min-idle: 2
+          testOnBorrow: true
+
+
 mybatis:
-        mapper-locations: classpath:mapping/*.xml
-        type-aliases-package: com.udemo.model
+        mapper-locations: classpath:mapping/*.xml #指明mapper的xml文件存放位置
+        type-aliases-package: com.udemo.model    #指明和数据库映射的实体的所在包
 
 #pagehelper分页插件
 pagehelper:
@@ -36,3 +55,4 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
+

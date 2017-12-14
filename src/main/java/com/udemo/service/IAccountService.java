@@ -1,6 +1,6 @@
 package com.udemo.service;
 
-import com.udemo.entity.Account;
+import com.udemo.model.Account;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public interface IAccountService {
 
     Account findAccountById(int id);
 
-    com.udemo.model.Account findAccountById(String id);
+    Account findAccountById(String id);
 
     List<Account> findAccountList();
 

@@ -1,8 +1,8 @@
 package com.udemo.service.impl;
 
 import com.udemo.dao.IAccountDAO;
-import com.udemo.entity.Account;
 import com.udemo.mapper.AccountMapper;
+import com.udemo.model.Account;
 import com.udemo.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

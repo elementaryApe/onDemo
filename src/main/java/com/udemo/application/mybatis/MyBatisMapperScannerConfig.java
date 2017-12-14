@@ -1,4 +1,4 @@
-package com.udemo.application;
+package com.udemo.application.mybatis;
 
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;

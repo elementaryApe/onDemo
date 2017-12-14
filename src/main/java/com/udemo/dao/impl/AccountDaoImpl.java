@@ -1,7 +1,7 @@
 package com.udemo.dao.impl;
 
 import com.udemo.dao.IAccountDAO;
-import com.udemo.entity.Account;
+import com.udemo.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
