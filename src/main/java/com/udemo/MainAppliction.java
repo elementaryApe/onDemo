@@ -3,6 +3,7 @@ package com.udemo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * Desc: 主程序启动入口
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Time: 15:42
  */
 @SpringBootApplication
+@EnableScheduling //开启定时任务
 @MapperScan("com.udemo.mapper")//项目中对应的mapper类的路径
 public class MainAppliction {
 
