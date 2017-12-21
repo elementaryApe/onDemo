@@ -11,6 +11,14 @@ spring:
             max-file-size: 128KB
             max-request-size: 128KB
 
+    mail:
+        host: smtp.163.com
+        username: hshandzmq@163.com
+        password: han930607QWE
+        port: 25
+        protocol: smtp
+        default-encoding: UTF-8
+
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
         url: jdbc:mysql://123.57.84.78:3306/ttx_app_push
